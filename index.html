@@ -44,7 +44,27 @@
         <p class="d-none d-md-block">Pagamento</p>
       </div>
     </div>
+    <div id="form-header">
+      <h2>Cadastre o seu endereço</h2>
+      <p>Preencha os campos para podermos enviar os seus produtos</p>
+    </div>
+    <form id="address-form">
+      <div class="row mb-3">
+        <div class="form-floating">
+          <input 
+            type="text" 
+            class="form-control shadow-none" 
+            id="cep"
+            name="cep" 
+            placeholder="Digite o seu CEP" 
+            minlength="8" 
+            maxlength="8" 
+            required
+          />
+          <label for="cep">Digite o seu CEP</label>
+        </div>
+      </div>
+    </form>
   </div>
-
 </body>
 </html>

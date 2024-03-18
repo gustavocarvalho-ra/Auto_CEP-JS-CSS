@@ -9,7 +9,7 @@
 
 #checkout-page {
   background-color: var(--bg-color);
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 
 #fade {
@@ -79,4 +79,29 @@
 
 .step p {
   color: var(--text-color);
+}
+
+.line {
+  border-bottom: 1px solid var(--border-color);
+  position: absolute;
+  top: 22.5px;
+  width: 90%;
+  left: 5%;
+  z-index: -1;
+}
+
+#form-header p {
+  color: var(--text-color);
+}
+
+#order-form-container input,
+#order-form-container select {
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  color: var(--primary-color);
+}
+
+#order-form-container label:active {
+  color: var(--s-color);
+  background: transparent;
 }
