@@ -8,6 +8,9 @@ const formInputs = document.querySelectorAll("[data-input]");
 
 const closeButton = document.querySelector("#close-message");
 
+const fadeElement = document.querySelector("#fade");
+
+
 // Validate CEP Input
 cepInput.addEventListener("keypress", (e) => {
   const onlyNumbers = /[0-9]|\./;
@@ -52,10 +55,6 @@ const getAddress = async (cep) => {
 
   // Show error and reset form
   if (data.erro === "true") {
-    if (!addressInput.hasAttribute("disabled")) {
-      toggleDisabled();
-    }
-
     addressForm.reset();
     toggleLoader();
     toggleMessage("CEP Inválido, tente novamente.");
@@ -90,7 +89,6 @@ const toggleDisabled = () => {
 
 // Show or hide loader
 const toggleLoader = () => {
-  const fadeElement = document.querySelector("#fade");
   const loaderElement = document.querySelector("#loader");
 
   fadeElement.classList.toggle("hide");
@@ -99,9 +97,7 @@ const toggleLoader = () => {
 
 // Show or hide message
 const toggleMessage = (msg) => {
-  const fadeElement = document.querySelector("#fade");
   const messageElement = document.querySelector("#message");
-
   const messageTextElement = document.querySelector("#message p");
 
   messageTextElement.innerText = msg;
