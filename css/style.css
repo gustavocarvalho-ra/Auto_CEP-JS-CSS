@@ -108,8 +108,23 @@
 
 #order-form-container label {
   color: var(--text-color);
+  left: 1em;
 }
 
-#order-form-container input {
-  
+#order-form-container input:disabled, 
+#order-form-container select:disabled {
+  background-color: var(--s-bg-color);
+  color: var(--text-color);
+}
+
+#order-form-container input:focus {
+  border-color: var(--s-color);
+}
+
+#save-btn {
+  background-color: #25cc88;
+  border: none;
+  height: 3em;
+  width: 8em;
+  border-radius: 1.5em;
 }
