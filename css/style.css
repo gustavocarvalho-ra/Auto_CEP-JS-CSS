@@ -101,3 +101,15 @@
   border: 2px solid var(--border-color);
   color: var(--primary-color);
 }
+
+#order-form-container select {
+  padding: 1rem .75em;
+}
+
+#order-form-container label {
+  color: var(--text-color);
+}
+
+#order-form-container input {
+  
+}
